@@ -7,8 +7,7 @@ import { Product } from '../product.model';
  */
 @Component({
   selector: 'products-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.css']
+  templateUrl: './products-list.component.html'
 })
 export class ProductsListComponent {
   @Input() productList: Product[];
