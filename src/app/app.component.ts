@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Product } from './product.model';
 
+/**
+ * @IntentoryApp: the top-level component
+ */
 @Component({
-  selector: 'app-root',
+  selector: 'inventory-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -33,5 +36,9 @@ export class AppComponent {
         29.99
       )
     ];
+  }
+
+  productWasSelected(product: Product): void {
+    console.log('Product clicked: ', product);
   }
 }
